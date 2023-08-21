@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIPZON</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo">
+                    <img class="img1" src="{% static 'images/LOGO3.jpg' %}" alt="logo">
+                    
+                </div>
+
+            </div>
+
+            <div class="nav-address border">
+                <p class="a1">Deliver to</p>
+                <div class="add-icon">
+             <i class="fa-solid fa-location-arrow"></i>
+           <p class="a2">India</p>
+
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select  class="ss">
+                    <option>
+                        All
+                    </option>
+                </select>
+              <input placeholder="Search Flipzon" class="s-place">
+              <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+              </div>  
+            </div>
+            
+            <div class="nav-signin border">
+                <a href = "{% url 'signup' %}"><button> <span>Hello, sign in</span></button></a> 
+                <p class="nav-2">Account & Lists</p>
+            </div>
+    
+            <div class="nav-return border">
+                <p> <span>Return</span></p>
+                <p class="nav-2">& Orders</p>
+            </div>
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+            <div class="logout border">
+                
+                <a href="{%url 'logout' %}"><button>Logout</button></a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p> Today's Deals </p>
+                <p> Customer Service </p>
+                <p> Registry </p>
+                <p> Gift Cards </p>  
+                <p> Sell </p>
+                
+                
+            </div>
+            <div class="welcome">
+                <div class="upper">Welcome</div>
+      <div class="lower">Welcome</div>
+      <div class="inside">{{name}}</div>
+            </div>
+            <div class="panel-deals">
+                Shop deals in Electronics
+            </div>
+        </div>
+        <div class="hero-section">
+            
+            <div class="hero-msg">
+                <p>You are on Flipzon.com. You can also shop on Flipzon India For millions of products with fast local delivery <a href="/home/">Click here to go to Flipzon.in </a></p>
+            </div>
+        </div>
+        
+    <div class="shop-section">
+        <div class="box1 box">
+       <div class="box-cont">
+        <h2>Clothes </h2>
+        <div class="box-img" style="background-image: url('{% static "images/box1_image.jpg " %}');" ></div>
+        <p>See More</p>
+       </div>
+
+        </div>
+        <div class="box2 box">
+            <div class="box-cont">
+        <h2>Health and Personal Care</h2>
+        <div class="box-img" style="background-image: url('{% static "images/box2_image.jpg " %}');" >
+
+        </div>
+        <p>See More</p>
+       </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-cont">
+        <h2>Furniture</h2>
+        <div class="box-img" style="background-image: url('{% static "images/box3_image.jpg " %}');" ></div>
+        <p>See More</p>
+       </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-cont">
+        <h2>Devices and Electronics</h2>
+        <div class="box-img" style="background-image: url('{% static "images/box4_image.jpg " %}');"  ></div>
+        <p>See More</p>
+       </div>
+        </div>
+        <div class="box5 box">
+            <div class="box-cont">
+             <h2>Beauty Picks</h2>
+             <div class="box-img" style="background-image: url('{% static "images/box5_image.jpg " %}');" ></div>
+             <p>See More</p>
+            </div>
+     
+             </div>
+             <div class="box6 box">
+                 <div class="box-cont">
+             <h2>Pet Care</h2>
+             <div class="box-img" style="background-image: url('{% static "images/box6_image.jpg " %}');" ></div>
+             <p>See More</p>
+            </div>
+             </div>
+             <div class="box7 box">
+                 <div class="box-cont">
+             <h2>New Arrival in Toys</h2>
+             <div class="box-img" style="background-image: url('{% static "images/box7_image.jpg " %}');" ></div>
+             <p>See More</p>
+            </div>
+             </div>
+             <div class="box8 box">
+                 <div class="box-cont">
+             <h2>Discover Fashion Trends</h2>
+             <div class="box-img" style="background-image: url('{% static "images/box8_image.jpg " %}');" ></div>
+             <p>See More</p>
+            </div>
+             </div>
+         </div>
+    </div>
+
+    
+    </header>
+
+    <footer>
+        <div class="foot-pannel1">
+            Back to top
+        </div>
+        <div class="foot-pannel2">
+            <u>
+                
+            </u>
+        </div>
+    </footer>
+
+    
+    
+    
+</body>
+</html>

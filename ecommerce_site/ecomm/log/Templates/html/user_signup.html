@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER SIGNUP</title>
+    <style>
+        form{
+           align-items: center ;
+           color: black;
+           place-items: center;
+           display: grid;
+           box-shadow: 0 15px 25px rgba(0,0,0,6);
+    border-radius: 10px; 
+    border: 10px solid black;
+           position: absolute;
+         
+           right: 25rem;
+           width: 300px;
+           padding: 60px;
+           background: linear-gradient(rgb(0, 174, 255),rgb(119, 128, 0));
+        }
+        .up{
+           margin-top: 10px;
+        }
+        .ph{
+            margin: 5px;
+        }
+        button{
+            border-left-width: 2rem;
+            
+        }
+        .login-button{
+         margin: 2.5rem;
+         margin-top: 1rem;
+         
+        }
+        .login{
+            font-size: 1.2rem;
+        }
+        body{
+            background-image: url(" /static/images/store.png");
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+<form action="" method="post">
+{%csrf_token%}
+{% for su in form %}
+<div class="up">{{su.label_tag}}  
+
+</div>
+<div class="ph">{{su}}</div>
+  
+{{su.errors}}<br>
+{%endfor%}
+
+<input type="Submit" value="Submit"><br>
+<div class="login">
+    <pre> Already a member?</pre>
+    <div class="login-button">
+    <button><a href="{%url 'login' %}">Login</a></button>
+    </div>
+    
+</div>
+
+</form>
+{% if messages %}
+        {% for message in messages %}
+            <small {% if message.tags%} class = "{{message.tags}}" {% endif %} >{{message}}</small>
+        {% endfor %}
+    {% endif %}
+
+
+    
+</body>
+</html>

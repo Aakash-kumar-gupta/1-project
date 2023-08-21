@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER LOGIN</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;700&family=Merriweather:ital,wght@0,300;1,400;1,900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url({% static 'images/ecommerce login.jpg'%});
+            background-size:45rem;
+            
+        }
+
+         
+         
+        .up{
+            display: grid;
+            align-items: center;
+            font-size: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-weight: 50rem;
+            color: yellow;
+            
+        }  
+        
+        .placeholder{
+            margin-bottom: 1.5rem;
+        
+        }
+        button{
+            font-family: 'Merriweather', serif;
+            margin-top: 50px;
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        input{
+            font-family: 'Merriweather', serif;
+            padding: 5px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: black;
+            
+        }
+    
+    </style>
+</head>
+<body>
+
+    <form  action="" method="POST">
+
+{%csrf_token%}
+
+{%for su in form%}
+<div class="up">
+    
+    <form>   {{su.label_tag}} 
+</div> <br>
+<div class="placeholder">
+{{su}} 
+</div>
+{{su.errors}} 
+{%endfor%}
+
+    <input type="submit" value="SIGN IN">
+
+
+<div class="signup">
+    
+    <button><p>Don't have an account yet?</p><a href = "{% url 'signup' %}">Signup</a></button>
+
+</div>
+
+</form>
+
+    </form>
+</body>
+</html>
